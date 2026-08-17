@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tripadvisor-reviews-scraper"
+version = "1.0.0"
+description = "Scrapes tripadvisor.com reviews via the official Android app's internal GraphQL API"
+requires-python = ">=3.10"
+dependencies = [
+    "curl_cffi>=0.16.0",
+    "beautifulsoup4>=4.12",
+]
+
+[project.scripts]
+tripadvisor-reviews-scraper = "tripadvisor_reviews_scraper.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tripadvisor_reviews_scraper*"]

@@ -1,0 +1,4 @@
+# one proxy per line, format matches what curl_cffi expects after http://
+# host:port or user:pass@host:port
+1.2.3.4:8080
+user:pass@5.6.7.8:8080
